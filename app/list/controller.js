@@ -148,7 +148,7 @@ angular.module('cards')
             scope: {
                 description: '=?'
             },
-            template: '<div style="width: 20px; height: 20px; background:{{color}};text-align:center;">{{letter}}</div>',
+            template: '<div style="background:{{color}};" class="operation-icon">{{letter}}</div>',
             link: function ($scope) {
                 $scope.letter = $scope.description[0].toUpperCase();
                 $scope.color = '#' + (0x1000000 + (Math.random()) * 0xffffff).toString(16).substr(1, 6);

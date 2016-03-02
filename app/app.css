@@ -1,7 +1,32 @@
+body {
+    padding: 20px 0;
+}
+
+.info-area {
+    padding: 10px 40px 20px;
+}
+
 .card {
     cursor: pointer;
 }
 
 .card.active {
     border: 1px solid #204d74;
+}
+
+.progress {
+    width: 200px;
+    height: 20px;
+    border: 1px solid #333;
+}
+
+.progress div {
+    height: 18px;
+    background: #428bca;
+}
+
+.operation-icon {
+    width: 20px;
+    height: 20px;
+    text-align: center;
 }
