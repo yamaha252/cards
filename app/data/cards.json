@@ -18,39 +18,46 @@
         "number": "5219 43** **** 3761",
         "isActivated": true,
         "isBlocked": false,
+        "blockPaymentOnline": true,
+        "notifications": {
+          "sms": true,
+          "email": true,
+          "systemMessages": true
+        },
+        "countries": [],
         "limits": {
           "total": {
-            "montly": 9000,
+            "monthly": 9000,
             "daily": 900
           },
           "atm": {
-            "montly": 3000,
+            "monthly": 3000,
             "daily": 300
           },
           "pos": {
-            "montly": 3000,
+            "monthly": 3000,
             "daily": 300
           },
           "magstripe": {
-            "montly": 3000,
+            "monthly": 3000,
             "daily": 300
           }
         },
         "spendings": {
           "total": {
-            "montly": 200,
+            "monthly": 200,
             "daily": 30
           },
           "atm": {
-            "montly": 100,
+            "monthly": 100,
             "daily": 30
           },
           "pos": {
-            "montly": 100,
+            "monthly": 100,
             "daily": 30
           },
           "magstripe": {
-            "montly": 0,
+            "monthly": 0,
             "daily": 0
           }
         },
@@ -58,56 +65,203 @@
           {
             "description": "Ticket RENFE",
             "amount": -2.95,
-            "curryncy": "EUR",
+            "currency": "EUR",
             "datetime": "23.02.2016 17:10",
             "wallet": "EUR 1"
           },
           {
             "description": "Cashback",
             "amount": 0.95,
-            "curryncy": "EUR",
+            "currency": "EUR",
             "datetime": "23.02.2016 17:11",
             "wallet": "EUR 1"
           },
           {
             "description": "Shop CARREFOUR",
             "amount": -12.95,
-            "curryncy": "EUR",
+            "currency": "EUR",
             "datetime": "23.02.2016 17:14",
             "wallet": "EUR 1"
           },
           {
             "description": "Ticket RENFE",
             "amount": -2.95,
-            "curryncy": "EUR",
+            "currency": "EUR",
             "datetime": "23.02.2016 17:12",
             "wallet": "EUR 1"
           },
           {
             "description": "Ticket RENFE",
             "amount": -2.95,
-            "curryncy": "EUR",
+            "currency": "EUR",
             "datetime": "23.02.2016 17:10",
             "wallet": "EUR 1"
           },
           {
             "description": "Cashback",
             "amount": 0.95,
-            "curryncy": "EUR",
+            "currency": "EUR",
             "datetime": "23.02.2016 17:11",
             "wallet": "EUR 1"
           },
           {
             "description": "Shop CARREFOUR",
             "amount": -12.95,
-            "curryncy": "EUR",
+            "currency": "EUR",
             "datetime": "23.02.2016 17:14",
             "wallet": "EUR 1"
           },
           {
             "description": "Ticket RENFE",
             "amount": -2.95,
-            "curryncy": "EUR",
+            "currency": "EUR",
+            "datetime": "23.02.2016 17:12",
+            "wallet": "EUR 1"
+          },
+          {
+            "description": "Cashback",
+            "amount": 0.95,
+            "currency": "EUR",
+            "datetime": "23.02.2016 17:11",
+            "wallet": "EUR 1"
+          },
+          {
+            "description": "Shop CARREFOUR",
+            "amount": -12.95,
+            "currency": "EUR",
+            "datetime": "23.02.2016 17:14",
+            "wallet": "EUR 1"
+          },
+          {
+            "description": "Ticket RENFE",
+            "amount": -2.95,
+            "currency": "EUR",
+            "datetime": "23.02.2016 17:12",
+            "wallet": "EUR 1"
+          },
+          {
+            "description": "Ticket RENFE",
+            "amount": -2.95,
+            "currency": "EUR",
+            "datetime": "23.02.2016 17:10",
+            "wallet": "EUR 1"
+          },
+          {
+            "description": "Cashback",
+            "amount": 0.95,
+            "currency": "EUR",
+            "datetime": "23.02.2016 17:11",
+            "wallet": "EUR 1"
+          },
+          {
+            "description": "Shop CARREFOUR",
+            "amount": -12.95,
+            "currency": "EUR",
+            "datetime": "23.02.2016 17:14",
+            "wallet": "EUR 1"
+          },
+          {
+            "description": "Ticket RENFE",
+            "amount": -2.95,
+            "currency": "EUR",
+            "datetime": "23.02.2016 17:12",
+            "wallet": "EUR 1"
+          },
+          {
+            "description": "Cashback",
+            "amount": 0.95,
+            "currency": "EUR",
+            "datetime": "23.02.2016 17:11",
+            "wallet": "EUR 1"
+          },
+          {
+            "description": "Shop CARREFOUR",
+            "amount": -12.95,
+            "currency": "EUR",
+            "datetime": "23.02.2016 17:14",
+            "wallet": "EUR 1"
+          },
+          {
+            "description": "Ticket RENFE",
+            "amount": -2.95,
+            "currency": "EUR",
+            "datetime": "23.02.2016 17:12",
+            "wallet": "EUR 1"
+          },
+          {
+            "description": "Ticket RENFE",
+            "amount": -2.95,
+            "currency": "EUR",
+            "datetime": "23.02.2016 17:10",
+            "wallet": "EUR 1"
+          },
+          {
+            "description": "Cashback",
+            "amount": 0.95,
+            "currency": "EUR",
+            "datetime": "23.02.2016 17:11",
+            "wallet": "EUR 1"
+          },
+          {
+            "description": "Shop CARREFOUR",
+            "amount": -12.95,
+            "currency": "EUR",
+            "datetime": "23.02.2016 17:14",
+            "wallet": "EUR 1"
+          },
+          {
+            "description": "Ticket RENFE",
+            "amount": -2.95,
+            "currency": "EUR",
+            "datetime": "23.02.2016 17:12",
+            "wallet": "EUR 1"
+          },
+          {
+            "description": "Cashback",
+            "amount": 0.95,
+            "currency": "EUR",
+            "datetime": "23.02.2016 17:11",
+            "wallet": "EUR 1"
+          },
+          {
+            "description": "Shop CARREFOUR",
+            "amount": -12.95,
+            "currency": "EUR",
+            "datetime": "23.02.2016 17:14",
+            "wallet": "EUR 1"
+          },
+          {
+            "description": "Ticket RENFE",
+            "amount": -2.95,
+            "currency": "EUR",
+            "datetime": "23.02.2016 17:12",
+            "wallet": "EUR 1"
+          },
+          {
+            "description": "Ticket RENFE",
+            "amount": -2.95,
+            "currency": "EUR",
+            "datetime": "23.02.2016 17:10",
+            "wallet": "EUR 1"
+          },
+          {
+            "description": "Cashback",
+            "amount": 0.95,
+            "currency": "EUR",
+            "datetime": "23.02.2016 17:11",
+            "wallet": "EUR 1"
+          },
+          {
+            "description": "Shop CARREFOUR",
+            "amount": -12.95,
+            "currency": "EUR",
+            "datetime": "23.02.2016 17:14",
+            "wallet": "EUR 1"
+          },
+          {
+            "description": "Ticket RENFE",
+            "amount": -2.95,
+            "currency": "EUR",
             "datetime": "23.02.2016 17:12",
             "wallet": "EUR 1"
           }
@@ -121,39 +275,50 @@
         "number": "4219 43** **** 3762",
         "isActivated": true,
         "isBlocked": false,
+        "blockPaymentOnline": false,
+        "notifications": {
+          "sms": true,
+          "email": true,
+          "systemMessages": true
+        },
+        "countries": [
+          "Aruba",
+          "Australia",
+          "Austria"
+        ],
         "limits": {
           "total": {
-            "montly": 900,
+            "monthly": 900,
             "daily": 90
           },
           "atm": {
-            "montly": 300,
+            "monthly": 300,
             "daily": 30
           },
           "pos": {
-            "montly": 300,
+            "monthly": 300,
             "daily": 30
           },
           "magstripe": {
-            "montly": 300,
+            "monthly": 300,
             "daily": 30
           }
         },
         "spendings": {
           "total": {
-            "montly": 200,
+            "monthly": 200,
             "daily": 30
           },
           "atm": {
-            "montly": 100,
+            "monthly": 100,
             "daily": 30
           },
           "pos": {
-            "montly": 100,
+            "monthly": 100,
             "daily": 30
           },
           "magstripe": {
-            "montly": 0,
+            "monthly": 0,
             "daily": 0
           }
         },
@@ -161,168 +326,168 @@
           {
             "description": "Ticket RENFE",
             "amount": -2.95,
-            "curryncy": "EUR",
+            "currency": "EUR",
             "datetime": "23.02.2016 17:10",
             "wallet": "EUR 1"
           },
           {
             "description": "Ticket RENFE",
             "amount": -2.95,
-            "curryncy": "EUR",
+            "currency": "EUR",
             "datetime": "23.02.2016 17:10",
             "wallet": "EUR 1"
           },
           {
             "description": "Ticket RENFE",
             "amount": -2.95,
-            "curryncy": "EUR",
+            "currency": "EUR",
             "datetime": "23.02.2016 17:10",
             "wallet": "EUR 1"
           },
           {
             "description": "Cashback",
             "amount": 0.95,
-            "curryncy": "EUR",
+            "currency": "EUR",
             "datetime": "23.02.2016 17:11",
             "wallet": "EUR 1"
           },
           {
             "description": "Cashback",
             "amount": 0.95,
-            "curryncy": "EUR",
+            "currency": "EUR",
             "datetime": "23.02.2016 17:11",
             "wallet": "EUR 1"
           },
           {
             "description": "Cashback",
             "amount": 0.95,
-            "curryncy": "EUR",
+            "currency": "EUR",
             "datetime": "23.02.2016 17:11",
             "wallet": "EUR 1"
           },
           {
             "description": "Cashback",
             "amount": 0.95,
-            "curryncy": "EUR",
+            "currency": "EUR",
             "datetime": "23.02.2016 17:11",
             "wallet": "EUR 1"
           },
           {
             "description": "Shop CARREFOUR",
             "amount": -12.95,
-            "curryncy": "EUR",
+            "currency": "EUR",
             "datetime": "23.02.2016 17:14",
             "wallet": "EUR 1"
           },
           {
             "description": "Shop CARREFOUR",
             "amount": -12.95,
-            "curryncy": "EUR",
+            "currency": "EUR",
             "datetime": "23.02.2016 17:14",
             "wallet": "EUR 1"
           },
           {
             "description": "Shop CARREFOUR",
             "amount": -12.95,
-            "curryncy": "EUR",
+            "currency": "EUR",
             "datetime": "23.02.2016 17:14",
             "wallet": "EUR 1"
           },
           {
             "description": "Shop CARREFOUR",
             "amount": -12.95,
-            "curryncy": "EUR",
+            "currency": "EUR",
             "datetime": "23.02.2016 17:14",
             "wallet": "EUR 1"
           },
           {
             "description": "Shop CARREFOUR",
             "amount": -12.95,
-            "curryncy": "EUR",
+            "currency": "EUR",
             "datetime": "23.02.2016 17:14",
             "wallet": "EUR 1"
           },
           {
             "description": "Shop CARREFOUR",
             "amount": -12.95,
-            "curryncy": "EUR",
+            "currency": "EUR",
             "datetime": "23.02.2016 17:14",
             "wallet": "EUR 1"
           },
           {
             "description": "Ticket RENFE",
             "amount": -2.95,
-            "curryncy": "EUR",
+            "currency": "EUR",
             "datetime": "23.02.2016 17:12",
             "wallet": "EUR 1"
           },
           {
             "description": "Ticket RENFE",
             "amount": -2.95,
-            "curryncy": "EUR",
+            "currency": "EUR",
             "datetime": "23.02.2016 17:12",
             "wallet": "EUR 1"
           },
           {
             "description": "Ticket RENFE",
             "amount": -2.95,
-            "curryncy": "EUR",
+            "currency": "EUR",
             "datetime": "23.02.2016 17:10",
             "wallet": "EUR 1"
           },
           {
             "description": "Ticket RENFE",
             "amount": -2.95,
-            "curryncy": "EUR",
+            "currency": "EUR",
             "datetime": "23.02.2016 17:10",
             "wallet": "EUR 1"
           },
           {
             "description": "Ticket RENFE",
             "amount": -2.95,
-            "curryncy": "EUR",
+            "currency": "EUR",
             "datetime": "23.02.2016 17:10",
             "wallet": "EUR 1"
           },
           {
             "description": "Cashback",
             "amount": 0.95,
-            "curryncy": "EUR",
+            "currency": "EUR",
             "datetime": "23.02.2016 17:11",
             "wallet": "EUR 1"
           },
           {
             "description": "Shop CARREFOUR",
             "amount": -12.95,
-            "curryncy": "EUR",
+            "currency": "EUR",
             "datetime": "23.02.2016 17:14",
             "wallet": "EUR 1"
           },
           {
             "description": "Shop CARREFOUR",
             "amount": -12.95,
-            "curryncy": "EUR",
+            "currency": "EUR",
             "datetime": "23.02.2016 17:14",
             "wallet": "EUR 1"
           },
           {
             "description": "Shop CARREFOUR",
             "amount": -12.95,
-            "curryncy": "EUR",
+            "currency": "EUR",
             "datetime": "23.02.2016 17:14",
             "wallet": "EUR 1"
           },
           {
             "description": "Shop CARREFOUR",
             "amount": -12.95,
-            "curryncy": "EUR",
+            "currency": "EUR",
             "datetime": "23.02.2016 17:14",
             "wallet": "EUR 1"
           },
           {
             "description": "Ticket RENFE",
             "amount": -2.95,
-            "curryncy": "EUR",
+            "currency": "EUR",
             "datetime": "23.02.2016 17:12",
             "wallet": "EUR 1"
           }
@@ -336,39 +501,46 @@
         "number": "5219 43** **** 3763",
         "isActivated": false,
         "isBlocked": false,
+        "blockPaymentOnline": false,
+        "notifications": {
+          "sms": true,
+          "email": true,
+          "systemMessages": true
+        },
+        "countries": [],
         "limits": {
           "total": {
-            "montly": 0,
+            "monthly": 0,
             "daily": 0
           },
           "atm": {
-            "montly": 0,
+            "monthly": 0,
             "daily": 0
           },
           "pos": {
-            "montly": 0,
+            "monthly": 0,
             "daily": 0
           },
           "magstripe": {
-            "montly": 0,
+            "monthly": 0,
             "daily": 0
           }
         },
         "spendings": {
           "total": {
-            "montly": 0,
+            "monthly": 0,
             "daily": 0
           },
           "atm": {
-            "montly": 0,
+            "monthly": 0,
             "daily": 0
           },
           "pos": {
-            "montly": 0,
+            "monthly": 0,
             "daily": 0
           },
           "magstripe": {
-            "montly": 0,
+            "monthly": 0,
             "daily": 0
           }
         },

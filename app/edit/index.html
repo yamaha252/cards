@@ -1,0 +1,82 @@
+<div data-ng-show="card">
+    <h1>
+        Card {{card.number}} Security Settings
+    </h1>
+
+    <form action="#" class="form-horizontal">
+        <div class="form-group">
+            <label class="col-sm-3 control-label">
+                Daily limit: <br>
+                <small>How much you can spent
+                    from your card each 24h
+                </small>
+            </label>
+            <div class="input-group col-sm-3">
+                <input type="text" class="form-control" data-ng-model="card.limits.pos.monthly">
+                <div class="input-group-addon">{{card.currency}}</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">
+                Monthly limit: <br>
+                <small>How much you can spent
+                    from your card each 30 day
+                </small>
+            </label>
+            <div class="input-group col-sm-3">
+                <input type="text" class="form-control" data-ng-model="card.limits.pos.daily">
+                <div class="input-group-addon">{{card.currency}}</div>
+            </div>
+        </div>
+        <div class="form group">
+            <div class="col-sm-3"></div>
+            <div class="input-group col-sm-3">
+                <a href="#">More options</a>
+            </div>
+        </div>
+        <br>
+        <div class="form-group">
+            <div class="col-sm-3"></div>
+            <label class="checkbox col-sm-3">
+                <input type="checkbox" data-ng-model="card.blockPaymentOnline">
+                Disable operations from internet
+            </label>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">
+                Process payments
+                only from:
+            </label>
+            <label class="checkbox col-sm-3">
+                <select data-ng-model="card.countries" data-ng-options="c for c in countries" multiple></select>
+            </label>
+        </div>
+    </form>
+    <h3>Spending notifications</h3>
+    <p>
+        Your default wallet settings are the most favorable for you, but, if you want to change them in any case, click
+        here
+    </p>
+    <div class="form form-inline">
+        <label class="checkbox">
+            <input type="checkbox" data-ng-model="card.notifications.sms">SMS
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" data-ng-model="card.notifications.email">Email
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" data-ng-model="card.notifications.systemMessages">Web Site
+        </label>
+    </div>
+
+    <h3>Wallet settings</h3>
+
+    <p>Your default wallet settings are the most favorable for you, but, if you want to change them in any case, click
+        here</p>
+
+    <a href="#">Edit wallets order for card funding spending</a>
+
+    <div>
+        <button class="btn btn-lg btn-primary" data-ng-click="save()">Save Limits</button>
+    </div>
+</div>

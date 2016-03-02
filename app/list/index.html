@@ -29,7 +29,7 @@
     <div class="row">
         <div class="col-md-4" style="padding-left: 0;">
             <div data-ng-repeat="card in data.cards.list">
-                <div class="well" data-ng-show="card.isActivated" data-ng-click="openCard(card)" style="cursor:pointer;">
+                <div class="well card" data-ng-show="card.isActivated" data-ng-click="openCard(card)" data-ng-class="{active: cardId==card.id}">
                     <p class="clearfix">
                         <strong>Activated</strong>
                         <span class="status">
@@ -67,7 +67,7 @@
             <h2 style="margin-top:0;">Anonimous limited <small>{{card.number}}</small> VISA</h2>
             <div class="clearfix" style="padding: 10px 0 20px;">
                 <ul class="nav pull-left">
-                    <button class="btn btn-primary">Settings & Limits</button>
+                    <a href="#/edit?id={{card.id}}" class="btn btn-primary">Settings & Limits</a>
                     <button class="btn btn-default">PIN</button>
                     <button class="btn btn-default">DETAILS</button>
               <span>
@@ -82,15 +82,18 @@
             <div>
                 <p>
                     <strong>Sum allowed for next withdrawal in ATM:</strong><br>
-                    11.68 USD / 120.00 USD - Card limit, <a href="#">Upgrade verification to Increase</a>
+                    {{card.spendings.atm.monthly | currency:"":2}} {{card.currency}} / {{card.limits.atm.monthly | currency:"":2}} {{card.currency}} - Card limit, <a href="#">Upgrade verification to Increase</a>
+                    <ng-progress data-current="card.spendings.atm.monthly" data-max="card.limits.atm.monthly"></ng-progress>
                 </p>
                 <p>
                     <strong>Sum allowed for next payment in POS:</strong><br>
-                    112.68 USD / 120.00 USD - Manual limit, <a href="#">change settings</a>
+                    {{card.spendings.pos.monthly | currency:"":2}} {{card.currency}} / {{card.limits.pos.monthly | currency:"":2}} {{card.currency}} - Manual limit, <a href="#">change settings</a>
+                    <ng-progress data-current="card.spendings.pos.monthly" data-max="card.limits.pos.monthly"></ng-progress>
                 </p>
                 <p>
                     <strong>Total limit</strong><br>
-                    11.68 USD / 120.00 USD - Card limit, <a href="#">Upgrade verification to Increase</a>
+                    {{card.spendings.total.monthly | currency:"":2}} {{card.currency}} / {{card.limits.total.monthly | currency:"":2}} {{card.currency}} - Card limit, <a href="#">Upgrade verification to Increase</a>
+                    <ng-progress data-current="card.spendings.total.monthly" data-max="card.limits.total.monthly"></ng-progress>
                 </p>
             </div>
             <hr>
@@ -104,6 +107,35 @@
                         <li role="presentation"><a href="#">Show Filters</a></li>
                     </ul>
                 </header>
+                <div data-ng-show="operations = card.operations">
+                    <table st-table="operations" class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th></th>
+                            <th>Description</th>
+                            <th>Amount</th>
+                            <th>Time</th>
+                            <th>Wallet</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="row in operations">
+                            <td><ng-icon data-description="row.description"></ng-icon></td>
+                            <td>{{row.description}}</td>
+                            <td>{{row.amount | currency:"":2}} {{row.currency}}</td>
+                            <td>{{row.datetime | date}}</td>
+                            <td>{{row.wallet}}</td>
+                        </tr>
+                        </tbody>
+                        <tfoot>
+                        <tr>
+                            <td colspan="5" class="text-center">
+                                <div st-pagination="" st-items-by-page="byPage" st-displayed-pages="7"></div>
+                            </td>
+                        </tr>
+                        </tfoot>
+                    </table>
+                </div>
             </div>
         </div>
     </div>

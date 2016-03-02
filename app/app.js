@@ -2,10 +2,11 @@
 
 require('angular');
 require('angular-route');
+require('angular-smart-table');
 
 var JSONb = require('json-bigint-string');
 
-var module = angular.module('cards', ['ngRoute']);
+var module = angular.module('cards', ['ngRoute', 'smart-table']);
 module.service('dataTruck', function ($http) {
     var data = [];
     return {
