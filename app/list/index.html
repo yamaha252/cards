@@ -37,7 +37,7 @@
                                  alt="">
                         </span>
                         <span class="check">
-                            <input type="checkbox" data-ng-model="card.isBlocked">
+                            <input type="checkbox" data-ng-model="card.isBlocked" ng-click="$event.stopPropagation();">
                         </span>
                         <span class="logo">
                             <img src="https://dl.dropboxusercontent.com/u/60349134/cb-cards/images/card_list/u503.png"
