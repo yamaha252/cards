@@ -98,44 +98,7 @@
             </div>
             <hr>
             <div>
-                <header class="clerfix">
-                    <h4 class="pull-left" style="padding-right: 30px;">Last operations:</h4>
-                    <ul class="nav nav-pills full-right" style="font-size: 12px;">
-                        <li role="presentation"><a href="#">Export in PDF</a></li>
-                        <li role="presentation"><a href="#">Export in CSV</a></li>
-                        <li role="presentation"><a href="#">10 20 30 40</a></li>
-                        <li role="presentation"><a href="#">Show Filters</a></li>
-                    </ul>
-                </header>
-                <div data-ng-show="operations = card.operations">
-                    <table st-table="operations" class="table table-striped">
-                        <thead>
-                        <tr>
-                            <th></th>
-                            <th>Description</th>
-                            <th>Amount</th>
-                            <th>Time</th>
-                            <th>Wallet</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr ng-repeat="row in operations">
-                            <td><ng-icon data-description="row.description"></ng-icon></td>
-                            <td>{{row.description}}</td>
-                            <td>{{row.amount | currency:"":2}} {{row.currency}}</td>
-                            <td>{{row.datetime | date}}</td>
-                            <td>{{row.wallet}}</td>
-                        </tr>
-                        </tbody>
-                        <tfoot>
-                        <tr>
-                            <td colspan="5" class="text-center">
-                                <div st-pagination="" st-items-by-page="byPage" st-displayed-pages="7"></div>
-                            </td>
-                        </tr>
-                        </tfoot>
-                    </table>
-                </div>
+                <ng-operations data-items="card.operations"></ng-operations>
             </div>
         </div>
     </div>

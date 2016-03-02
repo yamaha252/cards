@@ -5,7 +5,6 @@ angular.module('cards')
         $scope.data = dataTruck.get();
         $scope.cardId = $routeParams.id || null;
         $scope.cardsBlocked = true;
-        $scope.byPage = 10;
 
         /**
          * Send changed app data
@@ -122,7 +121,7 @@ angular.module('cards')
     /**
      * Progress line
      */
-    .directive('ngProgress', function() {
+    .directive('ngProgress', function () {
         return {
             restrict: 'EA',
             scope: {
@@ -131,24 +130,74 @@ angular.module('cards')
             },
             templateUrl: 'list/progress.html',
             link: function ($scope) {
-                var percent = Math.round(parseInt($scope.current) / parseInt($scope.max) * 100);
-                $scope.percent = percent > 100 ? 100 : percent;
+                $scope.$watch('current', calculate);
+                $scope.$watch('max', calculate);
+                function calculate() {
+                    var percent = Math.round(parseInt($scope.current) / parseInt($scope.max) * 100);
+                    $scope.percent = percent > 100 ? 100 : percent;
+                }
             }
         }
     })
     /**
      * Icon of an operation
      */
-    .directive('ngIcon', function() {
+    .directive('ngIcon', function () {
         return {
             restrict: 'EA',
             scope: {
-                description: '=?',
+                description: '=?'
             },
             template: '<div style="width: 20px; height: 20px; background:{{color}};text-align:center;">{{letter}}</div>',
             link: function ($scope) {
                 $scope.letter = $scope.description[0].toUpperCase();
-                $scope.color = '#'+(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6);
+                $scope.color = '#' + (0x1000000 + (Math.random()) * 0xffffff).toString(16).substr(1, 6);
+            }
+        }
+    })
+    /**
+     * Operations list
+     */
+    .directive('ngOperations', function () {
+        return {
+            restrict: 'EA',
+            scope: {
+                items: '=?'
+            },
+            templateUrl: 'list/operations.html',
+            link: function ($scope) {
+                $scope.byPage = 10;
+                $scope.page = 1;
+
+                function calculate() {
+                    $scope.count = $scope.items.length;
+                    $scope.pages = Math.ceil($scope.count / $scope.byPage);
+                    $scope.count = $scope.items.length;
+                    $scope.start = ($scope.page-1) * $scope.byPage;
+                    $scope.end = $scope.start + $scope.byPage;
+                    if ($scope.end > $scope.count) {
+                        $scope.end = $scope.count;
+                    }
+                    $scope.list = $scope.items.slice($scope.start, $scope.end);
+                }
+
+                $scope.$watch('items', function () {
+                    $scope.page = 1;
+                    calculate();
+                });
+                $scope.$watch('page', calculate);
+
+                $scope.prev = function () {
+                    if ($scope.page > 1) {
+                        $scope.page--;
+                    }
+                };
+
+                $scope.next = function () {
+                    if ($scope.page < $scope.pages) {
+                        $scope.page++;
+                    }
+                };
             }
         }
     })
