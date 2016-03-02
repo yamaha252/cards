@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html lang="en" ng-app="cards" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" ng-app="cards" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" ng-app="cards" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="cards" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cards App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="app.css">
+    <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body style="padding: 20px 0;">
+<div class="container">
+    <div class="header clearfix">
+        <nav>
+            <ul class="nav nav-pills pull-right">
+                <li role="presentation"><a href="#">Wallet</a></li>
+                <li role="presentation"><a href="#">Trading</a></li>
+                <li role="presentation" class="active"><a href="#">Cards</a></li>
+                <li role="presentation"><a href="#">Merchant</a></li>
+                <li role="presentation"><a href="#">Mobile</a></li>
+                <li role="presentation"><a href="#">Charts</a></li>
+                <li role="presentation"><a href="#"><strong>Login</strong></a></li>
+                <li role="presentation">
+                    <button class="btn">Sign Up</button>
+                </li>
+            </ul>
+        </nav>
+        <h3 class="text-muted">SomeBank</h3>
+    </div>
+
+    <div ng-view></div>
+</div>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>

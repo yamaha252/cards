@@ -1,0 +1,110 @@
+<div class="jumbotron" style="padding: 10px 40px 20px;">
+    <h2>Your cards</h2>
+    <div class="text-left">
+        <h3>Total balance on all cards: <strong>{{data.cards.balance}} RUR*</strong></h3>
+    </div>
+    <div class="clearfix">
+        <div class="pull-left">
+            <div class="form-inline">
+                Notify me about charges via:
+                <div class="checkbox">
+                    <label><input type="checkbox" data-ng-model="data.cards.notifications.sms"> SMS</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" data-ng-model="data.cards.notifications.email"> Email</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" data-ng-model="data.cards.notifications.systemMessages"> System messages</label>
+                </div>
+            </div>
+        </div>
+        <div class="pull-right form-inline">
+            <div class="checkbox">
+                <label><input type="checkbox" data-ng-model="cardsBlocked" data-ng-change="cardsBlockToggle()">Block all cards</label>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4" style="padding-left: 0;">
+            <div data-ng-repeat="card in data.cards.list">
+                <div class="well" data-ng-show="card.isActivated" data-ng-click="openCard(card)" style="cursor:pointer;">
+                    <p class="clearfix">
+                        <strong>Activated</strong>
+                        <span class="status">
+                            <img src="https://dl.dropboxusercontent.com/u/60349134/cb-cards/images/card_list/u305.png"
+                                 alt="">
+                        </span>
+                        <span class="check">
+                            <input type="checkbox" data-ng-model="card.isBlocked">
+                        </span>
+                        <span class="logo">
+                            <img src="https://dl.dropboxusercontent.com/u/60349134/cb-cards/images/card_list/u503.png"
+                                 alt="">
+                        </span>
+                        <span class="currency">{{card.currency}}</span>
+                    </p>
+
+                    <p><small>Raise limits in progress</small></p>
+                    <p><strong>{{card.number}}</strong></p>
+                    <small>463.44 ATM / 463.44 POS</small>
+                    <div><small><a href="#">Apply for Verification Level 3</a> to raise limit</small></div>
+                </div>
+
+                <div class="well" data-ng-show="!card.isActivated">
+                    <p class="clearfix">
+                        <strong>Not Activated</strong>
+                        <span class="currency">{{card.currency}}</span>
+                    </p>
+                    <p><strong>{{card.number}}</strong></p>
+                    <button class="btn btn-primary" data-ng-click="activateCard(card)">Activate Card</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-8" style="padding-right: 0;" data-ng-show="card = currentCard()">
+            <h2 style="margin-top:0;">Anonimous limited <small>{{card.number}}</small> VISA</h2>
+            <div class="clearfix" style="padding: 10px 0 20px;">
+                <ul class="nav pull-left">
+                    <button class="btn btn-primary">Settings & Limits</button>
+                    <button class="btn btn-default">PIN</button>
+                    <button class="btn btn-default">DETAILS</button>
+              <span>
+                <label><input type="checkbox" data-ng-model="card.isBlocked"> Block this card</label>
+              </span>
+                </ul>
+                <div class="pull-right">
+                    <button class="btn btn-danger" data-ng-click="removeCard(card)">REMOVE CARD</button>
+                </div>
+            </div>
+
+            <div>
+                <p>
+                    <strong>Sum allowed for next withdrawal in ATM:</strong><br>
+                    11.68 USD / 120.00 USD - Card limit, <a href="#">Upgrade verification to Increase</a>
+                </p>
+                <p>
+                    <strong>Sum allowed for next payment in POS:</strong><br>
+                    112.68 USD / 120.00 USD - Manual limit, <a href="#">change settings</a>
+                </p>
+                <p>
+                    <strong>Total limit</strong><br>
+                    11.68 USD / 120.00 USD - Card limit, <a href="#">Upgrade verification to Increase</a>
+                </p>
+            </div>
+            <hr>
+            <div>
+                <header class="clerfix">
+                    <h4 class="pull-left" style="padding-right: 30px;">Last operations:</h4>
+                    <ul class="nav nav-pills full-right" style="font-size: 12px;">
+                        <li role="presentation"><a href="#">Export in PDF</a></li>
+                        <li role="presentation"><a href="#">Export in CSV</a></li>
+                        <li role="presentation"><a href="#">10 20 30 40</a></li>
+                        <li role="presentation"><a href="#">Show Filters</a></li>
+                    </ul>
+                </header>
+            </div>
+        </div>
+    </div>
+</div>
